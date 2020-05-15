@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewData["Title"] = "ReportBug";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title> User Group</title>
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600" rel="stylesheet"><!-- End GOOGLE FONT -->
+    <!-- BEGIN THEME STYLES -->
+
+    <link href="~/dist/sidebar/sidebar.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <div id="wrapper">
+            <!-- .app -->
+
+            <div id="content-wrapper" class="d-flex flex-column">
+                <div id="content">
+
+                    <!-- Topbar -->
+                    <!-- End of Topbar -->
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+                        <div class=" p-4 ">
+                            <label class="col-md-4">Project Name:</label>
+                            <input type="text" name="projectname" class="col-md-7" />
+                        </div>
+                        <div class="p-4">
+                            <label class="col-md-4">Bug ID:</label>
+                            <input type="text" name="bugid" class="col-md-7" />
+                        </div>
+                        <label style="width:100%">TESTER DETAILS</label>
+                        <div class="p-4">
+
+                            <label class="col-md-4">Name:</label>
+                            <input type="text" name="username" class="col-md-7" />
+                        </div>
+                        <div class="p-4">
+                            <label class="col-md-4">Contact No:</label>
+                            <input type="text" name="contact" class="col-md-7" />
+                        </div>
+                        <div class="p-4">
+                            <label class="col-md-4">Bug Type:</label>
+                            <select id="bugtype" class="col-md-7">
+                                <option value="syntax">Syntax Error</option>
+                                <option value="Calculation">Calculation Error</option>
+                                <option value="Communication">Communication Error</option>
+                            </select>
+                        </div>
+                        <div class="p-4">
+                            <label class="col-md-4">Bug Description:</label>
+                            <textarea rows="3" id="bugdesc" class="col-md-7"></textarea>
+                        </div>
+                        <div class="p-4">
+                            <label class="col-md-4">Reported Date Time:</label>
+                            <input type="date" name="reportdate" class="border rounded black" style="width:50%" />
+                        </div>
+                        <div class="p-4">
+                            <label class="col-md-4">Bug Priority:</label>
+                            <input type="text" name="bugprio" class="col-md-7" />
+                        </div>
+                        <div class="p-4">
+                            <label class="col-md-4">Bug Severity:</label>
+                            <input type="text" name="bugsev" class="col-md-7" />
+                        </div>
+                        <div class="p-4">
+                            <label class="col-md-4">SLA(in days):</label>
+                            <input type="text" name="sla" class="col-md-7" />
+                        </div>
+                        <div class="p-4">
+                            <label class="col-md-4">Bug Status:</label>
+                            <input type="text" name="bugstatus" class="col-md-7" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

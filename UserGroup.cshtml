@@ -1,0 +1,324 @@
+﻿
+@{
+    ViewData["Title"] = "UserGroup";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title> User Group</title>
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600" rel="stylesheet"><!-- End GOOGLE FONT -->
+    <!-- BEGIN THEME STYLES -->
+
+    <link href="~/dist/sidebar/sidebar.css" rel="stylesheet" />
+    <style>
+        .scrollcmt {
+            width: 265px;
+            height: 87%;
+            overflow: scroll;
+        }
+
+            .scrollcmt::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(237,239,245,.1);
+                background-color: #F5F5F5;
+            }
+
+            .scrollcmt::-webkit-scrollbar {
+                width: 3px;
+                background-color: #edeff5;
+            }
+
+            .scrollcmt::-webkit-scrollbar-thumb {
+                background-color: #edeff5;
+                border: 2px solid #c1c1c1;
+            }
+    </style>
+
+
+
+    <style type="text/css">
+        /*task edit popup date*/
+
+        span.name {
+            float: none !important;
+            padding-left: 0px;
+        }
+
+        span.namestatus {
+            float: none !important;
+            padding-left: 50px;
+        }
+
+
+        /* Removes the clear button from date inputs */
+        input[type="date"]::-webkit-clear-button {
+            display: none;
+        }
+
+        /* Removes the spin button */
+        input[type="date"]::-webkit-inner-spin-button {
+            display: none;
+        }
+
+        /* Always display the drop down caret */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            color: #2c3e50;
+        }
+
+        /* A few custom styles for date inputs */
+        input[type="date"] {
+            -webkit-appearance: none;
+            color: #858796;
+            font-family: "Helvetica", arial, sans-serif;
+            font-size: 12px;
+            border: none;
+            /*background: #ecf0f1;*/
+            padding: 1px;
+            display: inline-block !important;
+            visibility: visible !important;
+            width: 92px;
+            font-weight: bold;
+        }
+
+        input[type="date"], focus {
+            color: #858796;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+        }
+
+
+
+        .fnt-for {
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        span.namedate {
+            float: none !important;
+            padding-left: 35px;
+        }
+    </style>
+</head>
+<body id="page-top">
+    <div id="wrapper">
+        <!-- .app -->
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+
+                <!-- Topbar -->
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <div>
+                        <div class="p-3">
+                            <input type="button" value="Add Group" class="bg-gradient-primary customizer-toggle  box-shadow-3 text-white text-bold " style="width:20%;height:20%;font-size:medium;" href="#" />
+
+
+                        </div>
+                        <div class="card shadow p-3">
+                            <div class="card shadow ">
+
+                                <div class="card-body">
+                                    <div class="table-responsive-sm table-responsive-lg table-responsive-xl">
+
+                                        <table class="table table-bordered table-hover" id="order-listing_length" width="100%" cellspacing="0">
+                                            <thead class="bg-gradient-primary text-white">
+
+                                                <tr>
+                                                    <th>Group ID</th>
+                                                    <th>Group Name</th>
+                                                    
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="bg-gray-100">
+                                                <tr>
+                                                    <td>Accur</td>
+                                                    <td>S B</td>
+                                                    
+
+                                                    <td class="txt-cnt">
+                                                        <a role="button" href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">
+                                                            Edit
+                                                        </a>
+
+
+                                                    </td>
+                                                    <td class="txt-cnt"> <a role="button" onclick="myFunction()" /*data-toggle ="modal" data-target=".bd-example-modal-sm" data-backdrop="static" data-keyboard="false" * />Delete </a> </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>Current Account</td>
+                                                    <td>CA</td>
+                                                    
+
+                                                    <td class="txt-cnt">
+                                                        <a role="button" href="#">
+                                                            Edit
+                                                        </a>
+
+
+                                                    </td>
+                                                    <td class="txt-cnt"> <a role="button" href="#">Delete </a> </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>Overdraft Account</td>
+                                                    <td>OD</td>
+                                                    
+
+                                                    <td class="txt-cnt">
+                                                        <a role="button" href="#"> Edit </a>
+
+
+                                                    </td>
+                                                    <td class="txt-cnt">  <a role="button" href="#"> Delete </a> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fixed Deposit</td>
+                                                    <td>FD</td>
+                                                    
+
+                                                    <td class="txt-cnt">
+                                                        <a role="button" href="#"> Edit </a>
+
+
+                                                    </td>
+                                                    <td class="txt-cnt">  <a role="button" href="#"> Delete </a> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Demat Account</td>
+                                                    <td>DA</td>
+                                                    
+
+                                                    <td class="txt-cnt">
+                                                        <a role="button" href="#"> Edit </a>
+
+
+                                                    </td>
+                                                    <td class="txt-cnt">  <a role="button" href="#"> Delete </a> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>NRI Account</td>
+                                                    <td>NRIA</td>
+                                                    
+
+                                                    <td class="txt-cnt">
+                                                        <a role="button" href="#"> Edit </a>
+
+
+                                                    </td>
+                                                    <td class="txt-cnt">  <a role="button" href="#"> Delete </a> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Recurring Deposit</td>
+                                                    <td>RD</td>
+                                                    
+
+                                                    <td class="txt-cnt">
+                                                        <a role="button" data-toggle="modal" data-target="#myModal"> Edit </a>
+
+
+                                                    </td>
+                                                    <td class="txt-cnt">  <a role="button" href="#"> Delete </a> </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- BEGIN BASE JS -->
+            <script src="~/bower_components/jquery/dist/jquery.min.js"></script>
+
+            <!-- BEGIN PLUGINS JS -->
+
+            <script src="https://uselooper.com/assets/vendor/sortablejs/Sortable.min.js"></script>
+
+            <!-- BEGIN THEME JS -->
+            <script src="https://uselooper.com/assets/javascript/theme.min.js"></script> <!-- END THEME JS -->
+            <!-- BEGIN PAGE LEVEL JS -->
+            <!---------------------------------------------------->
+
+
+
+            <script src="~/vendor/jquery/jquery.min.js"></script>
+
+
+            <!-- Core plugin JavaScript-->
+            <script src="~/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+            <!-- Custom scripts for all pages-->
+            <script src="~/js/sb-admin-2.min.js"></script>
+
+
+
+            <!-- container-scroller -->
+            <!-- plugins:js -->
+            <script src="~/js/vendor.bundle.base.js"></script>
+
+
+
+
+            <!-------SIDE BAR FOR COMMENTS-->
+            <div class="customizer border-left-blue-grey border-left-lighten-4 d-xl-block ">
+                <a class="customizer-close" href="#"><i class="fas fa-times"></i></a>
+                <!--<a class="bg-gradient-primary customizer-toggle  box-shadow-3" href="#">
+                <i class="fas fa-cog font-medium-3 spinner white"></i></a>-->
+                <div class="customizer-content p-2">
+                    <div>
+                        <h5 class="mt-4 text-bold-500 text-center">User Group</h5>
+                    </div>
+                    <div class="tab-content  ">
+
+                        <div class=" p-4 ">
+                            <label>Group ID:</label>
+                            <input type="text" name="groupid" style="width:100%;" />
+                        </div>
+                        <div class="p-4">
+                            <label>Group Name:</label>
+                            <input type="text" name="groupname" style="width:100%;" />
+                        </div>
+                        
+                        <div class="row p-4">
+                            <div class="col-md-6 ">
+                                <input type="submit" name="submit" value="SUBMIT" class="btn btn-primary" />
+
+                            </div>
+                            <div class="col-md-6">
+                                <input type="submit" name="cancel" value="CANCEL" class="btn btn-primary" />
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="~/dist/sidebar/sidebar.js"></script>
+    <script src="https://pixinvent.com/bootstrap-admin-template/robust/app-assets/vendors/js/vendors.min.js"></script>
+
+
+
+
+</body>
+</html>
+
